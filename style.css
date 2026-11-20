@@ -1,0 +1,70 @@
+body {
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 20px 0;
+}
+
+#ui {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+#heart {
+  position: absolute;
+  inset: 0;
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.love_word {
+  position: absolute;
+  color: #ea80b0;
+  font-size: 1rem;
+  transform: translate(-100%, -100%) rotate(-90deg);
+  text-shadow: 0 0 10px #ff5e8a;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.name {
+  color: #ea80b0;
+  font-family: Arial, sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  margin: 0 0 10px 0;
+  text-shadow: 0 0 15px #ff5e8a;
+  letter-spacing: 2px;
+}
+
+.message {
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 10px 0 0 0;
+  padding: 0 20px;
+  max-width: 600px;
+  line-height: 1.6;
+  text-shadow:
+    0 0 10px #ff5e8a,
+    0 0 20px #ff5e8a,
+    0 0 30px #ff5e8a,
+    0 0 40px #ff2e6d;
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0% { text-shadow: 0 0 10px #ff5e8a, 0 0 20px #ff5e8a, 0 0 30px #ff5e8a; }
+  50% { text-shadow: 0 0 15px #ff5e8a, 0 0 30px #ff5e8a, 0 0 50px #ff2e6d, 0 0 60px #ff2e6d; }
+  100% { text-shadow: 0 0 10px #ff5e8a, 0 0 20px #ff5e8a, 0 0 30px #ff5e8a; }
+}
